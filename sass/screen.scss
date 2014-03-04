@@ -1,0 +1,15 @@
+@import "base";
+
+body
+{
+width: 90%;
+padding-left: 5%;
+margin: 0 auto;
+
+	h1
+	{
+	font-family: $headline-font;
+	padding: 20px 0;
+	font-size: 2em;
+	}
+}

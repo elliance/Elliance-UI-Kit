@@ -1,0 +1,90 @@
+// Elliance UI Kit
+// Base Styles
+
+  $elliance-nav3: #8C847B; 
+  $elliance-border: #CBC0B3;
+
+  $elliance-nav2: #7F7870;
+  $elliance-nav1: #65605A;
+
+  $elliance-nav-closed: #3F3C38;
+  $elliance-nav-closed2: #65605A;
+
+  $elliance-nav-hover: #524F4A;
+
+
+
+  $body-font: Arial, Helvetica, sans-serif;
+  $headline-font: 'Nova Square', cursive;
+
+// shadowing
+
+  $default-shadow: #CCC 0px 2px 2px;
+
+// line-heights
+
+  $default-line-height: 1.6;
+
+
+// border-radii
+
+  $default-border-radius: 8px;
+
+
+// sizing
+
+  $base-font-size: 90%;
+  $max-width: 1400px;
+
+// break-points
+
+$break-smallest: 430px;
+$break-small: 500px;
+$break-medium: 767px;
+$break-large: 950px;
+
+$break-content: 750px;
+
+// mixins
+
+@mixin h1-style 
+{
+  font-size: 2.2em;
+  line-height: 1.3em;
+  font-family: $headline-font;
+}
+
+@mixin h2-style 
+{
+  font-size: .9em;
+  line-height: 1.3em;
+  font-family: $headline-font;
+  border-top: 1px solid #EFEFEF;
+  padding-top: 10px;
+}
+
+@mixin animation-slow
+{
+-webkit-transition: all 0.3s ease-out;  
+-moz-transition: all 0.3s ease-out;
+-ms-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+@mixin animation-fast
+{
+-webkit-transition: all 0.1s ease-out;  
+-moz-transition: all 0.1s ease-out;
+-ms-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;
+}
+
+
+
+
+//imports 
+@import "compass/reset";
+@import "grid";
+@import "nav";

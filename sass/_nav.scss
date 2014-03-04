@@ -1,0 +1,193 @@
+//collapsable navigation styling
+
+
+
+.sub-nav
+{
+background-color: #0e3a53;
+box-shadow: $default-shadow;
+display: block;
+width: 100%;
+overflow: hidden;
+margin-bottom: 20px;
+
+  a
+  {
+  color: #fff;
+  text-decoration: none;
+  font-family: $headline-font;
+
+    &:hover 
+    {
+    text-decoration: underline;
+    }
+  }
+
+  ul 
+  {
+
+    // First level styling
+    // Really super important stuff to make the li's work.
+
+    li 
+    {
+    background-color: $elliance-nav1;
+    border-top: 1px solid $elliance-border;
+    position: relative;
+    
+      // Positioning of text only, not toggle buttons
+
+      a:first-of-type
+      {
+      padding: 10px 0px 0px 10px;
+      display: block;
+      height: 25px;
+      font-size: .8em;
+      }
+
+      //Really super important stuff to make the toggler work.
+
+      .more, .less
+      {
+      width: 40px;
+      height: 35px;
+      display: block;
+      position: absolute;
+      top: 0;
+      background: url(../img/nav.png) no-repeat;
+      right: 0;
+
+        &:hover
+        {
+        background-color: $elliance-nav-hover;
+        }
+      }
+
+      // First level toggle colors
+
+      .more { background-color: $elliance-nav-closed; background-position: 13px 3px;}
+      .less { background-color: $elliance-nav2; background-position: -54px 4px;}
+
+      //Second level styling, all li positinoing CSS complete
+        
+      li 
+      {
+      background-color: $elliance-nav2;
+      border-top: 1px solid $elliance-border;
+      border-bottom: none;
+
+          //Indenting 2nd level text by 10px
+      
+          a:first-of-type
+          {
+          padding-left: 10px;
+          font-family: $body-font;
+
+            &:before 
+            {
+            content: "»  ";
+            }
+          }
+
+          // Second level toggle colors
+
+          .less { background-color: $elliance-nav3; }
+          .more { background-color: $elliance-nav-closed2; }
+
+          // Third level styling, all a tag positioning CSS complete, just changing colors. 
+
+          ul
+          {
+          border-bottom: none;
+          
+            li
+            {
+            background-color: $elliance-nav3;
+            border-bottom: none;
+            border-top: 1px solid $elliance-border;
+
+              a:first-of-type
+              {
+
+                &:before
+                {
+                  content: "-  " !important;
+                }
+              }
+
+              // Third level toggle colors 
+
+              .less { background-color: #337a9va; }
+              .more { }
+            }
+          }
+       }
+    }
+  }
+}
+
+
+// CSS to control the expand/collapse action
+// Collapsed state
+
+.el-nav-toggle
+{
+  > .el-nav-target 
+  {
+    height: 0;
+    visibility: hidden;
+
+
+  }
+
+  > .el-nav-toggle-toggler {
+    .less {
+      display: none;
+    }
+    .more {
+      display: block;
+    }
+  }
+}
+
+// Expanded state
+
+.el-nav-toggle.el-nav-toggle-expanded
+{
+  > .el-nav-target
+  {
+    height: auto;
+    visibility: visible;
+  }
+
+  > .el-nav-toggle-toggler {
+      .less {
+        display: block;
+      }
+      .more {
+        display: none;
+      }
+    }
+}
+
+// ie8 specific styling
+
+.lt-ie9 
+{
+  .sub-nav
+  {
+    ul
+    {
+      li 
+      {
+        a
+        {
+        padding: 10px 10px 0 10px !important;
+        display: block;
+        font-size: .8em;
+        }
+      }
+    }
+  }
+}
+
