@@ -1,5 +1,5 @@
 // Elliance UI Kit
-// Base Styles
+// Nav Colors
 
   $elliance-nav3: #8C847B; 
   $elliance-border: #CBC0B3;
@@ -12,56 +12,50 @@
 
   $elliance-nav-hover: #524F4A;
 
+// Button Colors
 
+// Fonts
 
   $body-font: Arial, Helvetica, sans-serif;
   $headline-font: 'Nova Square', cursive;
 
-// shadowing
+// Shadowing
 
   $default-shadow: #CCC 0px 2px 2px;
 
-// line-heights
+// Line-heights
 
   $default-line-height: 1.6;
 
 
-// border-radii
+// Border-radii
 
   $default-border-radius: 8px;
 
 
-// sizing
+// Sizing
 
-  $base-font-size: 90%;
   $max-width: 1400px;
 
-// break-points
 
-$break-smallest: 430px;
-$break-small: 500px;
-$break-medium: 767px;
-$break-large: 950px;
-
-$break-content: 750px;
-
-// mixins
+// Mixins - Header Styles
 
 @mixin h1-style 
 {
-  font-size: 2.2em;
-  line-height: 1.3em;
   font-family: $headline-font;
+  border-bottom: 1px solid #EFEFEF;
+  padding: 20px 0;
+  font-size: 2em;
 }
 
 @mixin h2-style 
 {
   font-size: .9em;
-  line-height: 1.3em;
   font-family: $headline-font;
-  border-top: 1px solid #EFEFEF;
-  padding-top: 10px;
+  padding: 20px 0;
 }
+
+// Mixins - Animations
 
 @mixin animation-slow
 {
@@ -81,10 +75,61 @@ transition: all 0.3s ease-out;
 transition: all 0.1s ease-out;
 }
 
+// Mixins - Gradients
 
+@mixin gradient-green
+{
+background-color: #8fc800; // Old browsers
+@include filter-gradient(#8fc800, #8fc800, vertical); // IE6-9
+@include background-image(linear-gradient(top,  #8fc800 0%,#8fc800 100%));
+}
 
+@mixin gradient-red 
+{
+background-color: #ff3019;
+@include filter-gradient(#ff3019, #cf0404, vertical);
+@include background-image(linear-gradient(top,  #ff3019 0%,#cf0404 100%));
+}
+
+@mixin gradient-blue
+{
+background-color: #00b7ea;
+@include filter-gradient(#00b7ea, #009ec3, vertical);
+@include background-image(linear-gradient(top,  #00b7ea 0%,#009ec3 100%));
+}
+
+@mixin gradient-orange
+{
+background-color: #ffaf4b;
+@include filter-gradient(#ffaf4b, #ff920a, vertical);
+@include background-image(linear-gradient(top,  #ffaf4b 0%,#ff920a 100%));
+}
+
+@mixin gradient-purple
+{
+background-color: #e570e7;
+@include filter-gradient(#e570e7, #a849a3, vertical);
+@include background-image(linear-gradient(top,  #e570e7 0%,#c85ec7 47%,#a849a3 100%));
+}
+
+@mixin gradient-black
+{
+background-color: #7d7e7d;
+@include filter-gradient(#7d7e7d, #0e0e0e, vertical);
+@include background-image(linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%));
+}
+
+@mixin gradient-white
+{
+background-color: #ffffff;
+@include filter-gradient(#ffffff, #e5e5e5, vertical);
+@include background-image(linear-gradient(top,  #ffffff 0%,#e5e5e5 100%));
+}
 
 //imports 
 @import "compass/reset";
+@import "compass";
 @import "grid";
 @import "nav";
+@import "buttons";
+

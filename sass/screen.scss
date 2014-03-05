@@ -5,11 +5,15 @@ body
 width: 90%;
 padding-left: 5%;
 margin: 0 auto;
+max-width:  $max-width;
 
 	h1
 	{
-	font-family: $headline-font;
-	padding: 20px 0;
-	font-size: 2em;
+	@include h1-style;
+	}
+
+	h2
+	{
+	@include h2-style;
 	}
 }
