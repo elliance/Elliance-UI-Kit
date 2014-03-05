@@ -6,7 +6,9 @@ The Elliance UI Kit is a simple collection of buttons, navigations, and other si
 This project is a work in progress, so far, included in this package is:
 
 Collapsable Navigation
+
 Fancy Buttons with rollovers
+
 CSS Animated Buttons
 
 ##Installation
@@ -45,6 +47,7 @@ Some elements of the UI Kit require jQuery in order to work. We've included it i
 
 ##Known Issues
 IE8 does not like the border rounding 
+
 IE8/IE9 does not like gradients
 
 ######©2013 Elliance, Inc. http://elliance.com - Creative Commons Attribution Sharealike 3.0 Unported http://creativecommons.org/licenses/by-sa/3.0/
